@@ -1,3 +1,6 @@
+# https://fastapi.tiangolo.com/ja/deployment/docker/#docker_1
+# 開発中はDevContainerでいいかな
+
 FROM python:3.9
 
 #
