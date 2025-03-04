@@ -8,8 +8,9 @@ app = FastAPI()
 
 class Item(BaseModel):
     name: str
+    description: str | None = None
     price: float
-    is_offer: bool = None
+    tax: float | None = None
 
 
 class ModelName(str, Enum):
