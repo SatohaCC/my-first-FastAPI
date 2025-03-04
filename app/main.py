@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+# Here the app variable will be an "instance" of the class FastAPI.
 app = FastAPI()
 
 
@@ -11,8 +12,8 @@ class Item(BaseModel):
 
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+async def root():
+    return {"message": "Hello World"}
 
 
 @app.get("/items/{item_id}")
