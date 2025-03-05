@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from enum import Enum
+from typing import Optional
 
 # Here the app variable will be an "instance" of the class FastAPI.
 app = FastAPI()
@@ -8,9 +9,9 @@ app = FastAPI()
 
 class Item(BaseModel):
     name: str
-    description: str | None = None
+    description: Optional[str] = None
     price: float
-    tax: float | None = None
+    tax: Optional[float] = None
 
 
 class ModelName(str, Enum):
