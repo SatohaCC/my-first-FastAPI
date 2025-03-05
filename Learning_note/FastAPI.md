@@ -14,5 +14,3 @@ https://fastapi.tiangolo.com/tutorial/
 - FastAPI は、API を定義するためのOpenAPI標準を使用して、すべての API を含む「スキーマ」を生成します。
 - ファイル内のパスの順序は重要
     - 先に具体的なパスを設定する
-
-temp
