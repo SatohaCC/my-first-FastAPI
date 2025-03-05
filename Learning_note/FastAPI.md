@@ -15,4 +15,4 @@ https://fastapi.tiangolo.com/tutorial/
 - ファイル内のパスの順序は重要
     - 先に具体的なパスを設定する
 
-te
+test
