@@ -26,11 +26,6 @@ async def root():
 # 先に具体的なパスを設定
 
 
-@app.get("/users/me")
-async def read_user_me():
-    return {"user_id": "the current user"}
-
-
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
