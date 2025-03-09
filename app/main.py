@@ -6,6 +6,11 @@ from typing import Optional
 # Here the app variable will be an "instance" of the class FastAPI.
 app = FastAPI()
 
+from app.routers import query
+
+
+app.include_router(query.router)
+
 
 class Item(BaseModel):
     name: str
@@ -23,6 +28,7 @@ class ModelName(str, Enum):
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
 
 # 先に具体的なパスを設定
 
