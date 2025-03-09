@@ -16,13 +16,24 @@
 	"forwardPorts": [80],
 
 	// コンテナ名を指定
-	"runArgs": ["--name=fast-dev-container"]
+	"runArgs": ["--name=fast-dev-container"],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode-remote.remote-containers"
+				// ここに他の拡張機能のIDを追加できます
+			]
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
