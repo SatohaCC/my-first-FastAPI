@@ -8,9 +8,11 @@ app = FastAPI()
 
 from app.routers import tutorial_query_params
 from app.routers import tutorial_body
+from app.routers import tutorial_query_param_models
 
 app.include_router(tutorial_query_params.router)
 app.include_router(tutorial_body.router)
+app.include_router(tutorial_query_param_models.router)
 
 
 class Item(BaseModel):
